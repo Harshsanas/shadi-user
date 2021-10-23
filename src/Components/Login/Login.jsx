@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import styled from "styled-components";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,7 +47,6 @@ export default function Login() {
               id="standard-password-input"
               label="Username"
               type="text"
-              autoComplete="current-password"
               value={user}
               onChange={(e) => setUser(e.target.value)}
             />
@@ -58,7 +56,6 @@ export default function Login() {
               id="standard-password-input"
               label="Password"
               type="password"
-              autoComplete="current-password"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
