@@ -49,9 +49,6 @@ export default function Home() {
           })
         }
     },[])
-
-
-
     return loading ? (
       "Loading..."
     ) : error ? (
@@ -62,7 +59,7 @@ export default function Home() {
         <USERDATA>
           {user.map((user) => {
             return (
-              <div key="null" className="user-details">
+              <div key={user.login.uuid} className="user-details">
                 <Card
                   name={
                     user.name.first.charAt(0).toUpperCase() +

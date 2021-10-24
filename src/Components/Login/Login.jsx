@@ -46,7 +46,6 @@ export default function Login() {
             <br />
             <TextField
               className="input"
-              id="standard-password-input"
               label="Username"
               type="text"
               value={user}
@@ -56,7 +55,6 @@ export default function Login() {
             <br />
             <TextField
               className="input input_2"
-              id="standard-password-input"
               label="Password"
               type="password"
               value={pass}
