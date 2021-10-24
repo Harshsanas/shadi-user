@@ -3,89 +3,52 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
-import red from "@material-ui/core/colors/red";
 import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import { FaMale } from "react-icons/fa";
-import { FaFemale } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
+
 
 const styles = (theme) => ({
   card: {
-    minWidth: 220,
-    maxWidth: 220,
-    minHeight: 320,
-    borderRadius: 10,
-    padding: 5,
-  },
-  content: {
-    padding: 5,
-  },
-  media: {
-    padding: 10,
-    borderRadius: 10,
-    paddingTop: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingBottom: 0,
-    marginBottom: 15,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+    textAlign: "center",
+    margin: 10,
+    maxWidth: 320,
+    minHeight: 480,
+    cursor: "pointer",
+    borderRadius: 8,
   },
   deleteBtn: {
     borderColor: "#ccc",
     borderStyle: "solid",
     borderWidth: 1,
-    margin: 0,
+  },
+  media: {
+    borderRadius: 10,
+    height: 300,
+    marginBottom: 15,
   },
   title: {
     fontSize: 16,
     paddingTop: 20,
+    color: "black",
     fontWeight: "bold",
     textAlign: "left",
   },
   pos: {
     marginBottom: 12,
-    fontSize: 12,
+    fontSize: 13,
+    color: "black",
     textAlign: "left",
-  },
-  FaFemaleIcon: {
-    color: red[200],
-    borderColor: red[200],
-  },
-  FaMaleIcon: {
-    color: "c5cae9",
-    borderColor: "c5cae9",
-  },
-  FaDeleteIcon: {
-    color: "#9db2b2",
-    border: "none",
-    fontSize: "1.3em",
-    marginLeft: 10,
-    marginTop: 1,
-  },
-  icon: {
-    margin: theme.spacing.unit * 2,
-  },
-  iconHover: {
-    margin: theme.spacing.unit * 2,
-    "&:hover": {
-      color: red[800],
-    },
   },
 });
 
 function SimpleCard(props) {
   const { classes } = props;
-
   return (
     <Card className={classes.card}>
-      <CardContent className={classes.content}>
+      <CardContent>
         <CardMedia
           component="img"
           alt={props.name}
@@ -95,29 +58,19 @@ function SimpleCard(props) {
           title={props.name}
         />
 
-        <Typography>
-          {props.gender === "male" ? (
-            <FaMale className={classes.FaMaleIcon} />
-          ) : (
-            <FaFemale className={classes.FaFemaleIcon} />
-          )}
-        </Typography>
         <br />
         <Typography className={classes.title} color="textSecondary">
-          {props.name}&nbsp;&nbsp;({props.nat})
-          {props.nat === "US" ? <span className="flagIcon"></span> : ""}
+          Name : {props.name}&nbsp;&nbsp;
         </Typography>
-
-        {props.nat !== "US" ? <br /> : ""}
 
         <Typography className={classes.pos} color="textSecondary">
-          {props.address}
+          Address : {props.address}
           <br />
-          {props.email}
+          Email ID : {props.email}
         </Typography>
+
         <CardActions>
           <Button
-            onClick={() => props.onDelete(props.id)}
             className={classes.deleteBtn}
             size="small"
           >

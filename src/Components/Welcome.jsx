@@ -7,6 +7,8 @@ export default function Welcome() {
     background-image: url("https://images.unsplash.com/photo-1542042161784-26ab9e041e89?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwd2VkZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     display: flex;
     justify-content: center;
+    color:#f50057;
+    font-weight: 700;
     background-size: cover;
     align-items: center;
     font-size: 38px;
