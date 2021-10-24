@@ -47,12 +47,6 @@ export default function Home() {
         }
     },[])
 
-    const fetchMoreData=()=>{
-      setTimeout(() => {
-        
-      }, 1000);
-
-    }
     return loading ? (
       <div>
         <h3 style={{ textAlign: "center", color: "#f50057" }}>
@@ -71,12 +65,13 @@ export default function Home() {
         <USERDATA>
           <InfiniteScroll
             dataLength={user.length}
-            next={fetchMoreData}
             hadMore={true}
             loader={<h4>Loading...</h4>}
             style={{ display: "grid", gridTemplateColumns: "auto auto auto" }}
           >
-            {user.map((user) => {
+            {
+              user.length>0 && 
+              user.map((user) => {
               return (
                 <div key={user.login.uuid} className="user-details">
                   <Card
