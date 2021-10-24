@@ -6,7 +6,7 @@ const NAVBAR = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background-color:#eb0062;
+  background-color:#F50057;
    .navbar-text {
     cursor: pointer;
     color: white;
@@ -21,17 +21,17 @@ export default function Navbar() {
       <NAVBAR>
         <div>
           <NavLink to="/" className="navbar-text">
-            SHAADI.COM
+            shaadi.com
           </NavLink>
         </div>
         <div>
-          <NavLink to="/userDetails" className="navbar-text">
-            User Details
+          <NavLink to="/userdetails" className="navbar-text">
+            user details
           </NavLink>
         </div>
         <div>
           <NavLink to="/login" className="navbar-text">
-            {!isAuth ? "Login" : "Logout"}
+            {!isAuth ? "login" : "logout"}
           </NavLink>
         </div>
       </NAVBAR>

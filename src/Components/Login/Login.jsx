@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  text:{
-    paddingTop:"50px"
+  text: {
+    paddingTop: "50px",
   },
 }));
 
@@ -62,7 +62,7 @@ export default function Login() {
             <br />
             <br />
             <Button onClick={handleLogin} variant="contained" color="secondary">
-              {isAuth ? "LOGOUT" : "LOGIN"}
+              {isAuth ? "login" : "login"}
             </Button>
           </div>
         </div>
