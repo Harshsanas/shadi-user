@@ -21,14 +21,14 @@ export default function Home() {
     let count=18;
     let start=1;
 
-
+    
     useEffect(()=>{
         
         if(loading){
         axios
           .get(`https://randomuser.me/api/?results=${count}&start=${start}`)
           .then((res) => {
-            console.log(res.data.results);
+            // console.log(res.data.results);
 
             setUser(res.data.results)
 
@@ -49,9 +49,7 @@ export default function Home() {
 
     return loading ? (
       <div>
-        <h3 style={{ textAlign: "center", color: "#f50057" }}>
-          Loading"Loading..."
-        </h3>
+        <h3 style={{ textAlign: "center", color: "#f50057" }}>"Loading..."</h3>
       </div>
     ) : error ? (
       <div>
@@ -68,9 +66,7 @@ export default function Home() {
             hadMore={true}
             style={{ display: "grid", gridTemplateColumns: "auto auto auto" }}
           >
-            {
-              user.length>0 && 
-              user.map((user) => {
+            {user.map((user) => {
               return (
                 <div key={user.login.uuid} className="user-details">
                   <Card

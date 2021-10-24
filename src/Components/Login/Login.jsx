@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "absolute",
-    padding:"50px 38vw",
     textAlign: "center",
     "& > *": {
       width: theme.spacing(45),

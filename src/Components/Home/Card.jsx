@@ -4,8 +4,10 @@ import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-
+import { FaTrashAlt } from "react-icons/fa";
 
 const styles = (theme) => ({
   card: {
@@ -15,6 +17,19 @@ const styles = (theme) => ({
     minHeight: 480,
     cursor: "pointer",
     borderRadius: 8,
+  },
+  deleteBtn: {
+    borderColor: "#f50057",
+    color: "#f50057",
+    borderStyle: "solid",
+    borderWidth: 1,
+    margin:0,
+
+    "&:hover": {
+      backgroundColor: "#f50057",
+      color: "white",
+      fontWeight: 600,
+    },
   },
   media: {
     borderRadius: 10,
@@ -56,11 +71,20 @@ function SimpleCard(props) {
 
         <Typography className={classes.pos} color="textSecondary">
           Mobile : {props.phone}
-          <br/>
+          <br />
           Address : {props.address}
           <br />
           Email ID : {props.email}
         </Typography>
+
+        <CardActions>
+          <Button
+            className={classes.deleteBtn}
+            size="small"
+          >
+            Delete <FaTrashAlt className={classes.FaDeleteIcon} />
+          </Button>
+        </CardActions>
       </CardContent>
     </Card>
   );
