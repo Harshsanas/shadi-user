@@ -36,6 +36,7 @@ export default function Login() {
   };
 
   console.log(handleLoginAuth);
+
   return !isAuth ? (
     <div className={classes.root}>
       <Paper elevation={15}>
@@ -65,7 +66,7 @@ export default function Login() {
             <br />
             <br />
             <Button onClick={handleLogin} variant="contained" color="secondary">
-              {isAuth ? "login" : "login"}
+              {isAuth ? "logout" : "login"}
             </Button>
           </div>
         </div>

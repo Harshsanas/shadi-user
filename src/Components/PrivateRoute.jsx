@@ -6,9 +6,7 @@ export default function PrivateRoute({ children, path }) {
   const { isAuth } = useContext(AuthContext);
 
   return isAuth ? (
-    <>
       <Route path={path}>{children}</Route>
-    </>
   ) : (
     <Redirect to="/login"></Redirect>
   );
