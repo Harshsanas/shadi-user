@@ -14,11 +14,7 @@ export function AuthContextProvider({ children }) {
     }
   };
 
-  const ToggleAuth = () => {
-    setIsAuth((el) => !el);
-  };
-
-  const value = { isAuth, setIsAuth, handleLoginAuth, ToggleAuth };
+  const value = { isAuth, setIsAuth, handleLoginAuth};
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

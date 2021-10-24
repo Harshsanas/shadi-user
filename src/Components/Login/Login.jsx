@@ -32,7 +32,6 @@ export default function Login() {
 
   const handleLogin = () => {
     handleLoginAuth(user, pass);
-    // ToggleAuth();
   };
 
   console.log(handleLoginAuth);
@@ -42,7 +41,7 @@ export default function Login() {
       <Paper elevation={15}>
         <div className="form_container">
           <div className={classes.text}>
-            <h1>LOGIN</h1>
+            <h1 style={{ color: "#f50057" }}>LOGIN</h1>
             <br />
             <TextField
               className="input"
