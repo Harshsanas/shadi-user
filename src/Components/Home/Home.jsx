@@ -66,7 +66,6 @@ export default function Home() {
           <InfiniteScroll
             dataLength={user.length}
             hadMore={true}
-            loader={<h4>Loading...</h4>}
             style={{ display: "grid", gridTemplateColumns: "auto auto auto" }}
           >
             {
