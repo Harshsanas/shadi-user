@@ -9,8 +9,8 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "absolute",
-    marginLeft: "10vw",
-    marginTop: "2%",
+    width: "100%",
+    padding: "20px 40vw",
     textAlign: "center",
     "& > *": {
       width: theme.spacing(45),
@@ -42,6 +42,7 @@ export default function Login() {
         <div className="form_container">
           <div className={classes.text}>
             <h1>LOGIN</h1>
+            <br />
             <TextField
               className="input"
               id="standard-password-input"
@@ -51,6 +52,7 @@ export default function Login() {
               onChange={(e) => setUser(e.target.value)}
             />
             <br />
+            <br />
             <TextField
               className="input input_2"
               id="standard-password-input"
@@ -59,6 +61,7 @@ export default function Login() {
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
+            <br />
             <br />
             <br />
             <Button onClick={handleLogin} variant="contained" color="secondary">
